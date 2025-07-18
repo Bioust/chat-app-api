@@ -130,7 +130,11 @@ public async Task<IActionResult> SendMessage([FromBody] Message message)
                     DBNull.Value);
                 cmd.Parameters.AddWithValue("timestamp", DateTime.UtcNow);
 
-                message.Id = (int)await cmd.ExecuteScalarAsync();
+                var result = await cmd.ExecuteScalarAsync();
+                if (result != null && result != DBNull.Value)
+                {
+                    message.Id = Convert.ToInt32(result);
+                }
                 message.Timestamp = DateTime.UtcNow;
 
                 return Ok(message);
@@ -235,7 +239,10 @@ public async Task<IActionResult> GetChatMessages(string userId)
 
             string sql = @"
                 SELECT m.id, m.content, m.sender_id, m.receiver_id, m.timestamp,
-                       u.username as sender_name
+                       u.username as sender_name,
+                m.status,      
+                m.delivered_at,
+                m.read_at 
                 FROM messages m
                 LEFT JOIN users u ON m.sender_id = u.id
                 WHERE (m.sender_id = @userId1 AND m.receiver_id = @userId2)
@@ -259,7 +266,10 @@ public async Task<IActionResult> GetChatMessages(string userId)
                             SenderId = reader.GetInt32(2).ToString(),
                             ReceiverId = !reader.IsDBNull(3) ? reader.GetInt32(3).ToString() : null,
                             Timestamp = reader.GetDateTime(4),
-                            SenderName = !reader.IsDBNull(5) ? reader.GetString(5) : null
+                            SenderName = !reader.IsDBNull(5) ? reader.GetString(5) : null,
+                Status = (MessageStatus)reader.GetInt32(6),  // Add this
+                DeliveredAt = reader.IsDBNull(7) ? null : reader.GetDateTime(7),  // Add this
+                ReadAt = reader.IsDBNull(8) ? null : reader.GetDateTime(8)
                         });
                     }
                 }

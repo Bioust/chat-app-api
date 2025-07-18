@@ -34,11 +34,6 @@ D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.MvcApplicationPartsAssemblyInfo
 D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.MvcApplicationPartsAssemblyInfo.cache
 D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets.build.json
 D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets.development.json
-D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets\msbuild.ChatApp.API.Microsoft.AspNetCore.StaticWebAssets.props
-D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets\msbuild.build.ChatApp.API.props
-D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ChatApp.API.props
-D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ChatApp.API.props
-D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets.pack.json
 D:\todo\ChatApp.API\obj\Debug\net8.0\scopedcss\bundle\ChatApp.API.styles.css
 D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp..54C60CEB.Up2Date
 D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.dll
@@ -46,3 +41,11 @@ D:\todo\ChatApp.API\obj\Debug\net8.0\refint\ChatApp.API.dll
 D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.pdb
 D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.genruntimeconfig.cache
 D:\todo\ChatApp.API\obj\Debug\net8.0\ref\ChatApp.API.dll
+D:\todo\ChatApp.API\bin\Debug\net8.0\ChatApp.API.staticwebassets.endpoints.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\ChatApp.API.sourcelink.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\todo\ChatApp.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json

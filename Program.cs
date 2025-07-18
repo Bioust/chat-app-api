@@ -12,10 +12,10 @@ builder.Services.AddControllers();
 
 // Add EndpointsApiExplorer and Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5033); // Allows access from any network
-}).UseUrls("http://0.0.0.0:5033", "http://*:5033");
+// builder.WebHost.ConfigureKestrel(options =>
+// {
+//     options.ListenAnyIP(5033); // Allows access from any network
+// }).UseUrls("http://0.0.0.0:5033", "http://*:5033");
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -96,6 +96,14 @@ builder.Services.AddCors(options =>
 
 // Add Database Service
 builder.Services.AddSingleton<DatabaseService>();
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(5033); // HTTP
+    serverOptions.ListenAnyIP(5001, listenOptions =>
+    {
+        listenOptions.UseHttps(); // HTTPS
+    });
+});
 
 var app = builder.Build();
 
@@ -117,6 +125,7 @@ app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
+// app.UseHttpsRedirection();
 
 app.MapControllers();
 app.MapHub<ChatHub>("/chatHub");
