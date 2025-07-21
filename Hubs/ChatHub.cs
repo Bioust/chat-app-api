@@ -333,11 +333,13 @@ namespace ChatApp.API.Hubs
             {
                 string callerId = Context.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
                 string callerName = Context.User?.Identity?.Name ?? string.Empty;
+                Console.WriteLine($"🔴 InitiateCall - CallerId: {callerId}, ReceiverId: {receiverId}, IsVideo: {isVideo}");
 
                 if (string.IsNullOrEmpty(callerId) || string.IsNullOrEmpty(receiverId))
                 {
                     throw new HubException("User information is missing");
                 }
+                Console.WriteLine($"📱 Connected users: {string.Join(", ", ConnectedUsers.Select(u => $"{u.Key}={u.Value}"))}");
 
                 // Get receiver's connection IDs
                 var receiverConnections = ConnectedUsers

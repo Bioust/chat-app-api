@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\todo\\ChatApp.API\\ChatApp.API.csproj": {}
+    "D:\\todo\\chat\\ChatApp.API\\ChatApp.API.csproj": {}
   },
   "projects": {
-    "D:\\todo\\ChatApp.API\\ChatApp.API.csproj": {
+    "D:\\todo\\chat\\ChatApp.API\\ChatApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\todo\\ChatApp.API\\ChatApp.API.csproj",
+        "projectUniqueName": "D:\\todo\\chat\\ChatApp.API\\ChatApp.API.csproj",
         "projectName": "ChatApp.API",
-        "projectPath": "D:\\todo\\ChatApp.API\\ChatApp.API.csproj",
+        "projectPath": "D:\\todo\\chat\\ChatApp.API\\ChatApp.API.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\todo\\ChatApp.API\\obj\\",
+        "outputPath": "D:\\todo\\chat\\ChatApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
